@@ -148,7 +148,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](images/Exercise1/add-cred1.png)
 
-1. Specify **hostlogin** as the friendly name for credentials, username <inject key="SmartHotelHost Admin Username"></inject>, and password <inject key="SmartHotelHost Admin Password"></inject> for the Hyper-V host/cluster that the appliance will use to discover VMs. Select **Save
+1. Specify **hostlogin** as the friendly name for credentials, username <inject key="SmartHotelHost Admin Username"></inject>, and password <inject key="SmartHotelHost Admin Password"></inject> for the Hyper-V host/cluster that the appliance will use to discover VMs. Select **Save**
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' panel.](images/Exercise1/add-cred2.png "Credentials")
 
