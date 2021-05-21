@@ -31,7 +31,7 @@ In this task, you will and select the assessment and migration tools, the Azure 
 
     ![](images/Exercise1/project-change.png)
 
-1. Select your **subscription** and select existing project named **SmartHotelMigrationDID**. Then select **Ok**.
+1. Select your **subscription** and select existing project named **SmartHotelMigration<inject key="DeploymentID" />**. Then select **Ok**.
 
     ![](images/Exercise1/project-select.png)
 
@@ -73,7 +73,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
      ![Screenshot of Hyper-V Manager, with the 'Hyperv Manager' action highlighted.](images/Exercise1/hyper-v-manager.png "Hyperv Manager")
 
-7. In Hyper-V Manager, select **SMARTHOST{SUFFIX}**. You should now see the AzureMigrateAppliance VM and four VMs that comprise the on-premises SmartHotel application.
+7. In Hyper-V Manager, select **SMARTHOST<inject key="Suffix" />**. You should now see the AzureMigrateAppliance VM and four VMs that comprise the on-premises SmartHotel application.
 
     ![Screenshot of Hyper-V Manager on the SmartHotelHost, showing 4 VMs: smarthotelSQL1, smarthotelweb1, smarthotelweb2 and UbuntuWAF.](images/Exercise1/Hyperv1.png "Hyper-V Manager")
 
@@ -85,7 +85,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
      1. Right click on the Azure Migrate appliance VM and select Upgrade Configuration version.
 	  1. On the pop-up, Select discard saved state and Upgrade
-	  1. Wait until all the updates are installed, then you can login to the vm using the password : demo!pass123
+	  1. Wait until all the updates are installed, then you can login to the vm using the password : **<inject key="SmartHotelHost Admin Password"></inject>**
 
 #### Task summary 
 
