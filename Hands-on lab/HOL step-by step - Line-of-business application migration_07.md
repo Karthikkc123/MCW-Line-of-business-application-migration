@@ -26,7 +26,7 @@ In this task you will create a new Azure SQL database to migrate the on-premises
   
     - Server: Select **Create new** and fill in the New server blade as follows then select **OK**:
   
-        - Server name: **smarthoteldb{SUFFIX}**
+        - Server name: **smarthoteldb<inject key="Suffix" />**
   
         - Server admin login: **demouser**
   
@@ -34,7 +34,7 @@ In this task you will create a new Azure SQL database to migrate the on-premises
   
         - Location: **IMPORTANT: Select the same region as resource group - this makes migration faster.**
 
-    > **Note**: You can verify the location by opening another browser tab, navigating to https://portal.azure.com and selecting Virtual Machines on the left navigation. Use the same region as the **SmartHost{SUFFIX}** virtual machine.
+    > **Note**: You can verify the location by opening another browser tab, navigating to https://portal.azure.com and selecting Virtual Machines on the left navigation. Use the same region as the **SmartHost<inject key="DeploymentID" />** virtual machine.
 
    ![Screenshot from the Azure portal showing the New server blade (when creating a SQL database).](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/dbserver.png?raw=true "Create Server for SQL Database")
 
@@ -81,11 +81,11 @@ In this task you will create an Azure Database Migration Service resource. This 
    
     - Subscription: **Select your Azure subscription**.
   
-    - Resource group: **AzureMigrateRG**
+    - Resource group:(select Existing) **AzureMigrateRG**
   
     - Service Name: **SmartHotelDBMigration**
   
-    - Location: **Choose the same region as the SmartHotel host**.
+    - Location: **Choose the same region as the SmartHotelHostRG**.
 
     - Service mode: **Azure**
   
