@@ -176,7 +176,7 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
 12. Select **Start Assessment** to start the assessment. 
 
-    ![Screenshot of the DMA showing assessment in progress.](images/Exercise2/assessment-in-progress.png "Start assessment")
+    ![Screenshot of the DMA showing assessment in progress.](images/Exercise2/Assessment.png "Start assessment")
 
 13. **Wait** for the assessment to complete, and review the results. The results should show two unsupported features, **Service Broker feature is not supported in Azure SQL Database** and **Azure SQL Database does not support EKM and Azure Key Vault integration**. For this migration, you can ignore these issues.
 
@@ -240,7 +240,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
     - Resource type: **Microsoft.Sql/servers**
   
-    - Resource: Select SQL database server **smarthoteldb{SUFFIX}** from the dropdown which you created previously.
+    - Resource: Select SQL database server **smarthoteldb<inject key="Suffix" />** from the dropdown which you created previously.
   
     - Target sub-resource: **sqlServer**
 
@@ -271,7 +271,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
    ![Screenshot showing step 2 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns2.png "Private DNS integration")
 
-   On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb{SUFFIX}** and an internal IP address **10.1.0.5** is listed.
+   On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb<inject key="Suffix" />** and an internal IP address **10.1.0.5** is listed.
 
    ![Screenshot showing step 3 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns3.png "Private Endpoint IP address")
 
@@ -280,7 +280,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 7.  Return to the Database server blade. Under **Security**, select **Firewalls and virtual networks**. Set 'Deny public network access' to **Yes**, then **Save** your changes.
 
     ![Screenshot showing the link to add an existing virtual network to the SQL database network security settings.](images/Exercise2/db-network.png "Database Server - Firewalls and virtual networks")
- In the Azure portal, navigate to the **SmartHotelDBRG** resource group, and then to the database server **smarthoteldb{SUFFIX}**. From the Oveview page, copy the server name of the database and keep this in a text editor as we will be using this further.
+ In the Azure portal, navigate to the **SmartHotelDBRG** resource group, and then to the database server **smarthoteldb<inject key="Suffix" />**. From the Oveview page, copy the server name of the database and keep this in a text editor as we will be using this further.
 
 8. Check that the Database Migration Service resource you created in task 3 has completed provisioning. You can check the deployment status from the **Deployments** pane in the **AzureMigrateRG** resource group blade.
 
@@ -290,7 +290,15 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
     ![Screenshot showing the Database Migration Service blade in the Azure portal, with the 'New Migration Project' button highlighted.](images/Exercise2/new-dms-project.png "New DMS migration project")
  
-10. the **New migration project** blade, enter **DBMigrate** as the project name. Leave the source server type as **SQL Server** and target server type as **Azure SQL Database**. Select **Choose type of activity** and select **Create project only**. Select **Save** then select **Create**.
+10. the **New migration project** blade, enter the project details as follows, then click **Save** followed by **Create**.
+
+     - Project name: **DBMigrate**
+
+     - Source server: **SQL Server**
+
+     - Target server: **Azure SQL Database**
+
+     - Migration activity type: **Create project only**
 
     ![Screenshot showing the Database Migration Service blade in the Azure portal, with the 'New Migration Project' button highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-1.png?raw=true "DMS migration project - settings")
 
@@ -302,7 +310,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
     - User Name: **sa**
   
-    - Password: **demo!pass123**
+    - Password: <inject key="SmartHotelHost Admin Password"></inject>
 
     - Encryption connection: **Checked**
   
@@ -324,9 +332,9 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
     - Authentication type: **SQL Authentication**
   
-    - User Name: **demouser**
+    - User Name: <inject key="SmartHotelHost Admin Username"></inject>
   
-    - Password: **demo!pass123**
+    - Password: <inject key="SmartHotelHost Admin Password"></inject>
   
     - Encrypt connection: **Checked**
 
@@ -354,11 +362,11 @@ The schema migration will be carried out using a schema migration activity withi
 
     ![Screenshot showing the 'New Activity' button within an Azure Database Migration Service project, with 'Schema only migration' selected from the drop-down.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration2.png?raw=true "New Activity")
 
-2. The Migration Wizard is shown. Most settings are already populated from the existing migration project. At the **Select source** step, re-enter the source database password **demo!pass123**, then select **Next: Select target**.
+2. The Migration Wizard is shown. Most settings are already populated from the existing migration project. At the **Select source** step, re-enter the source database password <inject key="SmartHotelHost Admin Password"></inject>, then select **Next: Select target**.
 
     ![Screenshot showing the 'Select source' step of the DMS Migration Wizard. The source database password is highlighted.](images/Exercise2/select-source-pwd-only.png "Select source")
 
-3. At the **Select target** step, enter the password **demo!pass123** and select **Next: Select database and schema**.
+3. At the **Select target** step, enter the password <inject key="SmartHotelHost Admin Password"></inject> and select **Next: Select database and schema**.
 
     ![Screenshot showing the 'Select target' step of the DMS Migration Wizard. The target database password is highlighted.](images/Exercise2/select-target-pwd-only.png "Select target")
 
@@ -388,7 +396,7 @@ The schema migration will be carried out using an offline data migration activit
 
     ![Screenshot showing the 'New Activity' button within an Azure Database Migration Service project, with 'Offline data migration' selected from the drop-down.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration2.1.png?raw=true "New Activity - Offline data migration")
 
-1. The Migration Wizard is shown. Most settings are already populated from the existing migration project. At the **Select source** step, re-enter the source database password **demo!pass123**, then select **Next: *Select databases***.
+1. The Migration Wizard is shown. Most settings are already populated from the existing migration project. At the **Select source** step, re-enter the source database password <inject key="SmartHotelHost Admin Password"></inject>, then select **Next: *Select databases***.
 
     ![Screenshot showing the 'Select source' step of the DMS Migration Wizard. The source database password is highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-3.png?raw=true "Select source")
 
@@ -396,7 +404,7 @@ The schema migration will be carried out using an offline data migration activit
 
     ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-4.png?raw=true)
     
-3. At the **Select target** step, enter the password **demo!pass123** and select **Next: Map to target databases**.
+3. At the **Select target** step, enter the password <inject key="SmartHotelHost Admin Password"></inject> and select **Next: Map to target databases**.
 
     ![Screenshot showing the 'Select target' step of the DMS Migration Wizard. The target database password is highlighted.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Migration-5.png?raw=true "Select target")
 
@@ -418,7 +426,7 @@ The schema migration will be carried out using an offline data migration activit
 
 As a final step, we will remove the private endpoint that allows the DMS service access to the database, since this access is no longer required.
 
-8.  In the Azure portal, expand the portal's left navigation by selecting **Show portal menu** in the top left, then select **Resource groups**. Select **SmartHotelDBRG** resource group, then the database server **smarthoteldb{SUFFIX}**.
+8.  In the Azure portal, expand the portal's left navigation by selecting **Show portal menu** in the top left, then select **Resource groups**. Select **SmartHotelDBRG** resource group, then the database server **smarthoteldb<inject key="Suffix" />**.
 
    ![Azure portal screenshot showing the select path to create a SQL Database.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/db1.png?raw=true "New SQL Database")
 
