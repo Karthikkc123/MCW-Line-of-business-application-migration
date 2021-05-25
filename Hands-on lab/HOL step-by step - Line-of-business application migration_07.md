@@ -28,9 +28,9 @@ In this task you will create a new Azure SQL database to migrate the on-premises
   
         - Server name: **smarthoteldb<inject key="Suffix" />**
   
-        - Server admin login: **demouser**
+        - Server admin login: <inject key="SmartHotelHost Admin Username"></inject>
   
-        - Password: **demo!pass123**
+        - Password: <inject key="SmartHotelHost Admin Password"></inject>
   
         - Location: **IMPORTANT: Select the same region as resource group - this makes migration faster.**
 
@@ -162,7 +162,7 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
   
     - Username: **sa**
   
-    - Password: **demo!pass123**
+    - Password: <inject key="SmartHotelHost Admin Password"></inject>
   
     - Encrypt connection: **Checked**
   
