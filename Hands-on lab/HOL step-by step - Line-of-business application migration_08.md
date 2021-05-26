@@ -22,7 +22,7 @@ In this task you will create a new Azure Storage Account that will be used by Az
   
     - Resource group: **AzureMigrateRG**
   
-    - Storage account name: **migrationstorage{SUFFIX}**
+    - Storage account name: **migrationstorage<inject key="Suffix" />**
   
     - Location: **IMPORTANT: Select the same location as your Azure SQL Database** (can be found in the Azure portal).
     
@@ -132,7 +132,7 @@ You will also configure a private endpoint in this network to allow private, sec
 
    ![Screenshot showing step 2 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns2.png "Private Endpoint DNS integration")
 
-   On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb{SUFFIX}** and an internal IP address **192.168.0.132** is listed.
+   On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb<inject key="Suffix" />** and an internal IP address **192.168.0.132** is listed.
 
    ![Screenshot showing step 3 to find the DNS entry for the SQL database server private endpoint](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/private-endpoint-dns3-1.png?raw=true "Find Private Endpoint IP address")
     
@@ -228,7 +228,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
     ![Screenshot of the 'Virtual machines' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The UbuntuWAF, smarthotelweb1, and smarthotelweb2 machines are selected.](images/Exercise3/replicate-4.png "Replicate - Virtual machines")
 
-5. In the **Target settings** tab, select your subscription and the existing **SmartHotelRG** resource group. Under **Replication storage account** select the **migrationstorageSUFFIX** storage account and under **Virtual Network** select **SmartHotelVNet**. Under **Subnet** select **SmartHotel**. Select **Next**.
+5. In the **Target settings** tab, select your subscription and the existing **SmartHotelRG** resource group. Under **Replication storage account** select the **migrationstorage<inject key="Suffix" />** storage account and under **Virtual Network** select **SmartHotelVNet**. Under **Subnet** select **SmartHotel**. Select **Next**.
 
     ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](images/Exercise3/replicate-5.png "Replicate - Target settings")
 
@@ -376,7 +376,7 @@ On the migrated VM **smarthotelweb2**, this configuration needs to be updated to
 
     **Note:** You may have to wait a few minutes and refresh to have the option to enter the credentials. 
 
-3. Connect to the machine with the username **Administrator** and the password **demo!pass123**. When prompted, **Allow** clipboard access.
+3. Connect to the machine with the username **Administrator** and the password <inject key="SmartHotelHost Admin Password"></inject>. When prompted, **Allow** clipboard access.
 
     ![Screenshot showing the Azure Bastion connection blade.](images/Exercise3/web2-connect.png "Connect using Bastion")
 
@@ -392,7 +392,7 @@ On the migrated VM **smarthotelweb2**, this configuration needs to be updated to
 
     > **Note:** You may need to open the clipboard panel on the left-hand edge of the Bastion window, paste the connection string there, and then paste into the VM.
 
-    Set the password in the connection string to **demo!pass123**.
+    Set the password in the connection string to <inject key="SmartHotelHost Admin Password"></inject>.
 
     ![Screenshot showing the user ID and Password in the web.config database connection string.](images/Exercise3/web2-connection-string.png "web.config")
 
@@ -456,7 +456,7 @@ In this task you will install the Azure Virtual Machine Agent (VM Agent) on your
 > In this lab, you will install the VM agent on the Azure VMs after migration. Alternatively, you could instead install the agent on the VMs in Hyper-V before migration.
 
 1. In the Azure portal, locate the **smarthotelweb1** VM and select **Connect**. Select **Bastion** from the available options and click on **Use Bastion**.
-Log in to the **Administrator** account using password **demo!pass123** (use the 'eyeball' to check the password was entered correctly with your local keyboard mapping).
+Log in to the **Administrator** account using password <inject key="SmartHotelHost Admin Password"></inject> (use the 'eyeball' to check the password was entered correctly with your local keyboard mapping).
 
 2. Open a web browser and download the VM Agent from:
 
@@ -474,7 +474,7 @@ Log in to the **Administrator** account using password **demo!pass123** (use the
 
 You will now install the Linux version of the Azure VM Agent on the Ubuntu VM. All Linux distributions supports by Azure have integrated the Azure VM Agent into their software repositories, making installation easy in most cases.
 
-5. In the Azure portal, locate the **UbuntuWAF** VM and **Connect** to the VM using Azure Bastion, with the user name **demouser** and password **demo!pass123**. Since this is a Linux VM, Bastion will create an SSH session. You may need to enter the credentials again. 
+5. In the Azure portal, locate the **UbuntuWAF** VM and **Connect** to the VM using Azure Bastion, with the user name <inject key="SmartHotelHost Admin Username"></inject> and password <inject key="SmartHotelHost Admin Password"></inject>. Since this is a Linux VM, Bastion will create an SSH session. You may need to enter the credentials again. 
  
 6. In the SSH session, enter the following command:
 
@@ -482,7 +482,7 @@ You will now install the Linux version of the Azure VM Agent on the Ubuntu VM. A
     sudo apt-get install walinuxagent
     ```
 
-    When prompted, enter the password **demo!pass123**. At the *Do you want to continue?* prompt, type **Y** and press **Enter**.
+    When prompted, enter the password <inject key="SmartHotelHost Admin Password"></inject>. At the *Do you want to continue?* prompt, type **Y** and press **Enter**.
 
     **Note**: You may need to open the clipboard panel on the left-hand edge of the Bastion window, paste the command, and then paste into the VM.
 
