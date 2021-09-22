@@ -23,13 +23,13 @@ In this task, you will and select the assessment and migration tools, the Azure 
     ![Screenshot of the Azure migrate overview blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Azmigrate.png?raw=true "Azmigrate Overview blade")
 
 
-1. Under Migration goals select **Windows, Linux and SQL Server**.
+1. Under Migration goals select **Servers, databases and web apps**.
  
-    ![](images/Exercise1/SP-Ex1t1s4.png)
+    ![](images/Exercise1/Ex1-01.png)
 
 1. Now, Select **Project(change)**. 
 
-    ![](images/Exercise1/project-change.png)
+    ![](images/Exercise1/Ex1-02.png)
 
 1. Select your **subscription** and select existing project named **SmartHotelMigration<inject key="DeploymentID" />**. Then select **Ok**.
 
@@ -37,7 +37,7 @@ In this task, you will and select the assessment and migration tools, the Azure 
 
 1. You should see the **Azure Migrate: Discovery and assessment** and **Azure Migrate: Server Migration** panels for the current migration project, as shown below.
 
-    ![](images/Exercise1/SP-Ex1t1s7.png)
+    ![](images/Exercise1/Ex01-03.png)
 
 #### Task summary 
 
@@ -49,7 +49,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
 1. Under **Azure Migrate: Discovery and assessment**, select **Discover** to open the **Discover** blade.
  
-    ![](images/Exercise1/SP-Ex1t2s1.png)
+    ![](images/Exercise1/Ex1-04.png)
  
 2. Under **Are your machines virtualized?**, select **Yes, with Hyper-V** from the **drop-down** menu.
 
@@ -185,7 +185,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 1. Return to the **Azure Migrate** blade in the Azure portal.  Select **Windows, Linux and SQL Server**, then select **Refresh**.  Under **Azure Migrate: Windows, Linux and SQL Server** you should see a count of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 5 discovered servers are shown. This may take several minutes
 
-    ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'discovered servers' is '5'.](images/Exercise1/discovered-servers-v2.png "Discovered servers")
+    ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'discovered servers' is '5'.](images/Exercise1/Ex1-05.png "Discovered servers")
 
     **Wait for the discovery process to complete before proceeding to the next Task**.
 
@@ -219,9 +219,9 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
     ![](images/Exercise1/assessment-create.png)
 
-6. On the **Windows, Linux and SQL Server** blade, select **Refresh** periodically until the number of assessments shown is **1**. This may take several minutes.
+6. On the **Servers, databases and web apps** blade, select **Refresh** periodically until the number of assessments shown is **1**. This may take several minutes.
 
-    ![Screenshot from Azure Migrate showing the number of assessments as '1'.](images/Exercise1/ssessments-refresh-v2.png "Azure Migrate - Assessments (count)")
+    ![Screenshot from Azure Migrate showing the number of assessments as '1'.](images/Exercise1/Ex1-06.png "Azure Migrate - Assessments (count)")
 
 7. Select **Assessments** under **Azure Migrate: Discovery and assessment** to see a list of assessments. Then select the actual assessment.
 
@@ -259,7 +259,7 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
 1. Return to the **Azure Migrate** blade in the Azure Portal, select **Windows, Linux and SQL Server**. Under **Discovery and assessment** select **Groups**,
 
-    ![](images/Exercise1/azure-migrate-group.png)   
+    ![](images/Exercise1/Ex1-07.png)   
 
 2. Select the **SmartHotel VMs** group to see the group details. 
 
