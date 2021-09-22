@@ -140,7 +140,6 @@ In this task, you will create the Azure Migrate project and select the assessmen
 
     >**Note**: If you are running this lab in a shared subscription you will need to use a migrate project name that is unique in the subscription. Append characters to the end of migrate project name to make your project name unique. For example: **SmartHotelMigration1234**.
 
-
     ![Screenshot of the Azure Migrate 'Create project' blade, showing the Azure Migrate project name, resource group and geography.](images/Exercise1/create-project.png "Azure Migrate - Create project")
 
 6. The Azure Migrate deployment will start. Once it has completed, you should see the **Azure Migrate: Server Assessment** and **Azure Migrate: Server Migration** panels for the current migration project, as shown below.
@@ -160,9 +159,10 @@ In this task, you will deploy and configure the Azure Migrate appliance in the o
     ![Screenshot of the Azure Migrate 'Discover machines' blade, with Hyper-V selected.](images/Exercise1/h-v.png "Hyper-V virtualization option")
 
 2.  In **1: Generate Azure Migrate project key**, provide **SmartHotelAppl** as name for the Azure Migrate appliance that you will set up for discovery of Hyper-V VMs. Select **Generate key** to start the creation of the required Azure resources. 
+    >**Note**: If the Azure Migrate project key genration failed with error Vault name 'SmartHotekMigrxxxx' is already in use. In this case go to the Azure Migrate main page and create a **new project** with different name by following task 1 step 3 again.    
 
     ![Screenshot of the Azure Migrate 'Discover machines' blade showing the 'Generate Azure Migrate project key' section.](images/Exercise1/gen-key.png "Generate Azure Migrate project key")
-
+    
     >**Note**: If you are running this lab in a shared Azure Migrate project, you will need to provide an appliance name that is unique in the project. Append characters to the end of appliance name to make your appliance name unique. For example: **SmartHotelAppl123**.
 
 3.  **Wait** for the key to be generated, then copy the **Azure Migrate project key** to your clipboard.
