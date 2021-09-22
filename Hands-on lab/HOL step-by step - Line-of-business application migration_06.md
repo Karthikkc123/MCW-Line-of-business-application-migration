@@ -183,7 +183,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 1. Wait for the Azure Migrate status to show **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table..
 
-1. Return to the **Azure Migrate** blade in the Azure portal.  Select **Servers, databases and web apps**, then select **Refresh**.  Under **Azure Migrate: Windows, Linux and SQL Server** you should see a count of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 5 discovered servers are shown. This may take several minutes
+1. Return to the **Azure Migrate** blade in the Azure portal.  Select **Servers, databases and web apps**, then select **Refresh**.  Under **Azure Migrate: Servers, databases and web apps** you should see a count of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 5 discovered servers are shown. This may take several minutes
 
     ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'discovered servers' is '5'.](images/Exercise1/Ex1-05.png "Discovered servers")
 
