@@ -349,6 +349,8 @@ Azure Bastion requires a dedicated subnet within the same virtual network as the
     - Name: **SmartHotelBastion**
   
     - Region: **Same as SmartHotelVNet**
+    
+    - Tier: **Basic**
   
     - Virtual Network: **SmartHotelVNet**
   
@@ -356,7 +358,7 @@ Azure Bastion requires a dedicated subnet within the same virtual network as the
   
     - Public IP address: (Create new) **Bastion-IP**
 
-    ![Screenshot showing the 'Create a Bastion' blade.](images/Exercise3/bastion-create.png "Create a Bastion")
+    ![Screenshot showing the 'Create a Bastion' blade.](images/Exercise3/Ex03-04.png "Create a Bastion")
 
 5. Select **Review + create**, then **Create**.
 
