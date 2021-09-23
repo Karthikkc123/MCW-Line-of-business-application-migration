@@ -46,8 +46,6 @@ In this task you will create a new Azure SQL database to migrate the on-premises
 
    ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/sqldb-01.png?raw=true "selecting database tier")
 
-   ![Screenshot for selecting database tier.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/sqldb-02.png?raw=true "selecting database tier")
-
     The final screenshot will look like this:
 
    ![Screenshot from the Azure portal showing the Create SQL Database blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/sqldb-03.png?raw=true "Create SQL Database")
