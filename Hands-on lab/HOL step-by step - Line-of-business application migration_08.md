@@ -30,7 +30,7 @@ In this task you will create a new Azure Storage Account that will be used by Az
   
    - Redundancy: **Locally-redundant storage (LRS)**
 
-    ![Screenshot of the Azure portal showing the create storage account blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/create-sg.png?raw=true "Storage account settings")
+    ![Screenshot of the Azure portal showing the create storage account blade.](images/Exercise3/sg-01.png "Storage account settings")
 
 3. Select **Review + create**, then select **Create**.
 
@@ -60,7 +60,7 @@ You will also configure a private endpoint in this network to allow private, sec
   
    - Region: **IMPORTANT: Select the same location as your Resource Group**.
 
-   ![Screenshot of the Azure portal showing the create virtual network blade 'Basics' tab.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/create-vnet.png?raw=true "Create Virtual Network - Basics")
+   ![Screenshot of the Azure portal showing the create virtual network blade 'Basics' tab.](images/Exercise3/vnet-01.png "Create Virtual Network - Basics")
 
 3. Select **Next: IP Addresses >**, and enter the following configuration. Then select **Review + create**, then **Create**.
 
@@ -95,7 +95,7 @@ You will also configure a private endpoint in this network to allow private, sec
   
    - Region: **Select the same location as the Resource Group**.
   
-   ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e3%20t2%20s5.png?raw=true "Create a Private Endpoint - Basics")
+   ![Screenshot showing the 'Create a private endpoint' blade, 'Basics' tab.](images/Exercise3/pendpoint-01.png "Create a Private Endpoint - Basics")
    
 
 6. On the **Resource** tab, enter the following configuration then select **Next: Configuration**:
@@ -154,7 +154,7 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
 
    **Note:** You may need to add the migration tool yourself by following the link below the **Migration Tools** section, selecting **Azure Migrate: Server Migration**, then selecting **Add tool(s)**.
    
-    ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](images/Exercise3/Ex3-01.png "Azure Migrate: Server Migration - Discover")
+    ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](images/Exercise3/azuremigrate-15.png "Azure Migrate: Server Migration - Discover")
 
 2. In the **Discover machines** panel,
    - under **Are your machines virtualized**, select **Yes, with Hyper-V**.
@@ -203,7 +203,7 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
 
 13. The **Azure Migrate: Server Migration** panel should now show 5 discovered servers..
 
-    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](images/Exercise3/Ex3-02.png "Discovered servers")
+    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](images/Exercise3/azuremigrate-13.png "Discovered servers")
 
 #### Task summary 
 
@@ -254,7 +254,7 @@ In this task, you will configure and enable the replication of your on-premises 
 
 8. In the **Azure Migrate - Servers, databases and web apps** blade, under **Azure Migrate: Server Migration**, select the **Overview** button.
 
-    ![Screenshot of the 'Azure Migrate - Servers' blade with the 'Overview' button in the 'Azure Migrate: Server Migration' panel highlighted.](images/Exercise3/Ex3-03.png "Overview link")
+    ![Screenshot of the 'Azure Migrate - Servers' blade with the 'Overview' button in the 'Azure Migrate: Server Migration' panel highlighted.](images/Exercise3/azuremigrate-14.png "Overview link")
     
 9. Confirm that the 3 machines are replicating.
 
@@ -370,7 +370,7 @@ Azure Bastion requires a dedicated subnet within the same virtual network as the
   
    - Public IP address: (Create new) **Bastion-IP**
 
-    ![Screenshot showing the 'Create a Bastion' blade.](images/Exercise3/Ex03-04.png "Create a Bastion")
+    ![Screenshot showing the 'Create a Bastion' blade.](images/Exercise3/bastion-01.png "Create a Bastion")
 
 5. Select **Review + create**, then **Create**.
 
