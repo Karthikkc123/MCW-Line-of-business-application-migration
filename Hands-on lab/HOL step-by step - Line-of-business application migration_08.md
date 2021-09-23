@@ -23,7 +23,7 @@ In this task you will create a new Azure Storage Account that will be used by Az
    - Resource group: **AzureMigrateRG**
   
    - Storage account name: **migrationstorage<inject key="DeploymentID" enableCopy="false" />**
-  
+
    - Location: **IMPORTANT: Select the same region as the Resource Group**.
     
    - Performance: **Standard**
@@ -133,7 +133,7 @@ You will also configure a private endpoint in this network to allow private, sec
 
    ![Screenshot showing step 2 to find the DNS entry for the SQL database server private endpoint](images/Exercise2/private-endpoint-dns2.png "Private Endpoint DNS integration")
 
-   On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb{SUFFIX}** and an internal IP address **192.168.0.132** is listed.
+   On the **privatelink.database.windows.net** overview blade, note that the **Record set** with name **smarthoteldb<inject key="Suffix" />** and an internal IP address **192.168.0.132** is listed.
 
    ![Screenshot showing step 3 to find the DNS entry for the SQL database server private endpoint](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/private-endpoint-dns3-1.png?raw=true "Find Private Endpoint IP address")
     
@@ -150,11 +150,11 @@ In this task you created a new virtual network that will be used by your virtual
 
 In this task, you will register your Hyper-V host with the Azure Migrate: Server Migration service. This service uses Azure Site Recovery as the underlying migration engine. As part of the registration process, you will deploy the Azure Site Recovery Provider on your Hyper-V host.
 
-1. Return to the **Azure Migrate | Windows, Linux and SQL Server** blade in the Azure Portal, and select **Windows, Linux and SQL Server** under **Migration goals** on the left. Under **Migration Tools**, select **Discover**.
+1. Return to the **Azure Migrate | Servers, databases and web apps** blade in the Azure Portal, and select **Servers, databases and web apps** under **Migration goals** on the left. Under **Migration Tools**, select **Discover**.
 
-   **Note:** You may need to add the migration tool yourself by following the link below the **Migration Tools** section, selecting **Azure Migrate: Server Migration**, then selecting **Add tool(s)**. 
-
-   ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](images/Exercise3/discover-1-2.png "Azure Migrate: Server Migration - Discover")
+   **Note:** You may need to add the migration tool yourself by following the link below the **Migration Tools** section, selecting **Azure Migrate: Server Migration**, then selecting **Add tool(s)**.
+   
+    ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](images/Exercise3/Ex3-01.png "Azure Migrate: Server Migration - Discover")
 
 2. In the **Discover machines** panel,
    - under **Are your machines virtualized**, select **Yes, with Hyper-V**.
@@ -203,7 +203,7 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
 
 13. The **Azure Migrate: Server Migration** panel should now show 5 discovered servers..
 
-    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](images/Exercise3/discover-8-2.png "Discovered servers")
+    ![Screenshot of the 'Azure Migrate - Servers' blade showing 6 discovered servers under 'Azure Migrate: Server Migration'.](images/Exercise3/Ex3-02.png "Discovered servers")
 
 #### Task summary 
 
@@ -235,7 +235,7 @@ In this task, you will configure and enable the replication of your on-premises 
    - **Virtual Network**: Select **SmartHotelVNet**. 
    - **Subnet**: Select **SmartHotel**. Select **Next**.
  
-
+ 
    ![Screenshot of the 'Target settings' tab of the 'Replicate' wizard in Azure Migrate Server Migration. The resource group, storage account and virtual network created earlier in this exercise are selected.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/migration.png?raw=true "Replicate - Target settings")
 
  > **Note:** For simplicity, in this lab you will not configure the migrated VMs for high availability, since each application tier is implemented using a single VM.
@@ -252,10 +252,10 @@ In this task, you will configure and enable the replication of your on-premises 
 
 7. In the **Disks** tab, review the settings but do not make any changes. Select **Next**, then select **Replicate** to start the server replication.
 
-8. In the **Azure Migrate - Windows, Linux and SQL Server** blade, under **Azure Migrate: Server Migration**, select the **Overview** button.
+8. In the **Azure Migrate - Servers, databases and web apps** blade, under **Azure Migrate: Server Migration**, select the **Overview** button.
 
-   ![Screenshot of the 'Azure Migrate - Servers' blade with the 'Overview' button in the 'Azure Migrate: Server Migration' panel highlighted.](images/Exercise3/replicate-7-2.png "Overview link")
-
+    ![Screenshot of the 'Azure Migrate - Servers' blade with the 'Overview' button in the 'Azure Migrate: Server Migration' panel highlighted.](images/Exercise3/Ex3-03.png "Overview link")
+    
 9. Confirm that the 3 machines are replicating.
 
    ![Screenshot of the 'Azure Migrate: Server Migration' overview blade showing the replication state as 'Healthy' for 3 servers.](images/Exercise3/replicate-8.png "Replication summary")
@@ -359,8 +359,10 @@ Azure Bastion requires a dedicated subnet within the same virtual network as the
    - Resource group: (select existing) **BastionRG**
   
    - Name: **SmartHotelBastion**
- 
+  
    - Region: **Same as SmartHotelVNet**
+    
+   - Tier: **Basic**
   
    - Virtual Network: **SmartHotelVNet**
   
@@ -368,7 +370,7 @@ Azure Bastion requires a dedicated subnet within the same virtual network as the
   
    - Public IP address: (Create new) **Bastion-IP**
 
-   ![Screenshot showing the 'Create a Bastion' blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/create-bastion.png?raw=true "Create a Bastion")
+    ![Screenshot showing the 'Create a Bastion' blade.](images/Exercise3/Ex03-04.png "Create a Bastion")
 
 5. Select **Review + create**, then **Create**.
 
@@ -388,7 +390,7 @@ On the migrated VM **smarthotelweb2**, this configuration needs to be updated to
 
    **Note:** You may have to wait a few minutes and refresh to have the option to enter the credentials. 
 
-3. Connect to the machine with the username **Administrator** and the password **demo!pass123**. When prompted, **Allow** clipboard access.
+3. Connect to the machine with the username **Administrator** and the password <inject key="SmartHotelHost Admin Password"></inject>. When prompted, **Allow** clipboard access.
 
    ![Screenshot showing the Azure Bastion connection blade.](images/Exercise3/web2-connect.png "Connect using Bastion")
 
@@ -468,6 +470,7 @@ In this task you will install the Azure Virtual Machine Agent (VM Agent) on your
 > In this lab, you will install the VM agent on the Azure VMs after migration. Alternatively, you could instead install the agent on the VMs in Hyper-V before migration.
 
 1. In the Azure portal, locate the **smarthotelweb1** VM and select **Connect**. Select **Bastion** from the available options and click on **Use Bastion**.
+
 Log in to the **Administrator** account using password **<inject key="SmartHotelHost Admin Password" />** (use the 'eyeball' to check the password was entered correctly with your local keyboard mapping).
 
 2. Open a web browser and download the VM Agent from:
@@ -487,7 +490,7 @@ Log in to the **Administrator** account using password **<inject key="SmartHotel
 You will now install the Linux version of the Azure VM Agent on the Ubuntu VM. All Linux distributions supports by Azure have integrated the Azure VM Agent into their software repositories, making installation easy in most cases.
 
 5. In the Azure portal, locate the **UbuntuWAF** VM and **Connect** to the VM using Azure Bastion, with the user name **demouser** and password **<inject key="SmartHotelHost Admin Password" />**. Since this is a Linux VM, Bastion will create an SSH session. You may need to enter the credentials again. 
- 
+
 6. In the SSH session, enter the following command:
 
    ```s

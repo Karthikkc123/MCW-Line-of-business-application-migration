@@ -22,14 +22,13 @@ In this task, you will and select the assessment and migration tools, the Azure 
  
     ![Screenshot of the Azure migrate overview blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Azmigrate.png?raw=true "Azmigrate Overview blade")
 
+4. Under Migration goals select **Servers, databases and web apps**.
 
-4. Under Migration goals select **Windows, Linux and SQL Server**.
- 
-    ![](images/Exercise1/SP-Ex1t1s4.png)
+    ![](images/Exercise1/Ex1-01.png)
 
 5. Now, Select **Project(change)**. 
 
-    ![](images/Exercise1/project-change.png)
+    ![](images/Exercise1/Ex1-02.png)
 
 6. Select your **subscription** and select existing project named **SmartHotelMigration<inject key="DeploymentID" enableCopy="false" />**. Then select **Ok**.
 
@@ -37,7 +36,7 @@ In this task, you will and select the assessment and migration tools, the Azure 
 
 7. You should see the **Azure Migrate: Discovery and assessment** and **Azure Migrate: Server Migration** panels for the current migration project, as shown below.
 
-    ![](images/Exercise1/SP-Ex1t1s7.png)
+    ![](images/Exercise1/Ex01-03.png)
 
 #### Task summary 
 
@@ -49,7 +48,7 @@ In this task, you will deploy the Azure Migrate appliance in the on-premises Hyp
 
 1. Under **Azure Migrate: Discovery and assessment**, select **Discover** to open the **Discover** blade.
  
-    ![](images/Exercise1/SP-Ex1t2s1.png)
+    ![](images/Exercise1/Ex1-04.png)
  
 2. Under **Are your machines virtualized?**, select **Yes, with Hyper-V** from the **drop-down** menu.
 
@@ -138,7 +137,6 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 9. Log in using your Azure credentials. Once you have logged in, return to the Azure Migrate Appliance tab and the appliance registration will start automatically.
      > **Note**: You can find the Azure Credentials from the **Environment details page**.
 
-
    ![Screenshot of the Azure Migrate appliance configuration wizard, showing the registration with the Azure Migrate project as completed.](images/Exercise1/reg2.png "Appliance registered")
 
    Once the registration has completed, you can proceed to the next panel, **Manage credentials and discovery sources**.
@@ -146,6 +144,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 10. In **Step 1: Provide Hyper-V host credentials**, select **Add credentials**.
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' button.](images/Exercise1/add-cred1.png)
+
 
 11. Specify **hostlogin** as the friendly name for credentials, username **demouser**, and password **<inject key="SmartHotelHost Admin Password" />** for the Hyper-V host/cluster that the appliance will use to discover VMs. Select **Save**.
 
@@ -184,9 +183,9 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
 16. Wait for the Azure Migrate status to show **Discovery has been successfully initiated**. This will take several minutes. After the discovery has been successfully initiated, you can check the discovery status against each host/cluster in the table..
 
-17. Return to the **Azure Migrate** blade in the Azure portal.  Select **Windows, Linux and SQL Server**, then select **Refresh**.  Under **Azure Migrate: Windows, Linux and SQL Server** you should see a count of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 5 discovered servers are shown. This may take several minutes.
+17. Return to the **Azure Migrate** blade in the Azure portal.  Select **Servers, databases and web apps**, then select **Refresh**.  Under **Azure Migrate: Servers, databases and web apps** you should see a count of the number of servers discovered so far. If discovery is still in progress, select **Refresh** periodically until 5 discovered servers are shown. This may take several minutes.
 
-    ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'discovered servers' is '5'.](images/Exercise1/discovered-servers-v2.png "Discovered servers")
+    ![Screenshot of the Azure Migrate portal blade. Under 'Azure Migrate: Server Assessment' the value for 'discovered servers' is '5'.](images/Exercise1/Ex1-05.png "Discovered servers")
 
     **Wait for the discovery process to complete before proceeding to the next Task**.
     
@@ -231,7 +230,7 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 > 
 > Once the CSV is populated, you can then import the systems into the Migrate assessment phase by doing the following:
 >
->1.	Go to the Azure Migrate, under Migration goals, select the appropriate resource type (ie: Windows, Linux and SQL Server).
+>1.	Go to the Azure Migrate, under Migration goals, select the appropriate resource type (ie: Servers, databases and web apps).
 >
 >2.	Select the **Discover** link.
 >
@@ -275,10 +274,10 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 
    ![](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e1%20t4%20ss5.png?raw=true)
 
-6. On the **Windows, Linux and SQL Server** blade, select **Refresh** periodically until the number of assessments shown is **1**. This may take several minutes.
+6. On the **Servers, databases and web apps** blade, select **Refresh** periodically until the number of assessments shown is **1**. This may take several minutes.
 
-   ![Screenshot from Azure Migrate showing the number of assessments as '1'.](images/Exercise1/ssessments-refresh-v2.png "Azure Migrate - Assessments (count)")
-
+    ![Screenshot from Azure Migrate showing the number of assessments as '1'.](images/Exercise1/Ex1-06.png "Azure Migrate - Assessments (count)")
+    
 7. Select **Assessments** under **Azure Migrate: Discovery and assessment** to see a list of assessments. Then select the actual assessment.
 
    ![Screenshot showing a list of Azure Migrate assessments. There is only one assessment in the list. It has been highlighted.](images/Exercise1/assessment-list-v2.png "Azure Migrate - Assessments (list)")
@@ -316,7 +315,7 @@ In this task, you will use Azure Migrate to create a migration assessment for th
 >_Refresh Data_
 > 
 > Many issues in the Migrate can be related to the appliance not refreshing the data due to regular schedules or data not being transferred.  Forcing the data and information to be updated can be achieved with the following steps:
-> 1.	In Windows, Linux and SQL Servers > Azure Migrate: Discovery and assessment, select Overview.
+> 1.	In Servers, databases and web apps > Azure Migrate: Discovery and assessment, select Overview.
 > 2.	Under Manage, select Appliances.
 > 3.	Select Refresh services.
 > 4.	Wait for the refresh operation to complete. You should now see up-to-date information.
@@ -334,9 +333,9 @@ When migrating a workload to Azure, it is important to understand all workload d
 
 In this task, you will configure the Azure Migrate dependency visualization feature. This requires you to first create a Log Analytics workspace, and then to deploy agents on the to-be-migrated VMs.
 
-1. Return to the **Azure Migrate** blade in the Azure Portal, select **Windows, Linux and SQL Server**. Under **Discovery and assessment** select **Groups**,
+1. Return to the **Azure Migrate** blade in the Azure Portal, select **Servers, databases and web apps**. Under **Discovery and assessment** select **Groups**,
 
-   ![](images/Exercise1/azure-migrate-group.png)   
+    ![](images/Exercise1/Ex1-07.png)   
 
 2. Select the **SmartHotel VMs** group to see the group details. 
 
@@ -354,7 +353,6 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 
    - OMS workspace: Enter **AzureMigrateWS<inject key="DeploymentID" enableCopy="false" />**
    - OMS workspace location: Select **East US** from the dropdown.
-
 
   ![Screenshot of the Azure Migrate 'Configure OMS workspace' blade.](images/Exercise1/configure-oms.png "OMS Workspace settings")
 
@@ -450,6 +448,7 @@ You will now deploy the Linux versions of the Microsoft Monitoring Agent and Dep
     ![Screenshot showing the command prompt with an SSH session to UbuntuWAF.](images/Exercise1/ssh.png "SSH session with UbuntuWAF")
 
 27. Enter the following command, followed by the password **<inject key="SmartHotelHost Admin Password" />** when prompted:
+
 
     ```s
     sudo -s
