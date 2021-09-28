@@ -448,8 +448,7 @@ You will now deploy the Linux versions of the Microsoft Monitoring Agent and Dep
     ![Screenshot showing the command prompt with an SSH session to UbuntuWAF.](images/Exercise1/ssh.png "SSH session with UbuntuWAF")
 
 27. Enter the following command, followed by the password **<inject key="SmartHotelHost Admin Password" />** when prompted:
-
-
+  
     ```
     sudo -s
     ```
@@ -458,7 +457,7 @@ You will now deploy the Linux versions of the Microsoft Monitoring Agent and Dep
 
 28. Enter the following command, substituting \<Workspace ID\> and \<Workspace Key\> with the values copied previously. Answer **Yes** when prompted to restart services during package upgrades without asking.  
 
-    ```s
+    ```
     wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <Workspace ID> -s <Workspace Key>
     ```
 
