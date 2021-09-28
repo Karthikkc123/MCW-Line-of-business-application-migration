@@ -440,6 +440,8 @@ In this task, you will associate a public IP address with the UbuntuWAF VM. This
 6. Open a new browser tab and paste the IP address into the address bar. Verify that the SmartHotel360 application is now available in Azure
 
    ![Screenshot showing the SmartHotel application.](images/Exercise3/webpage.png "Migrated SmartHotel application")
+   
+   > **Note**: The Check-in and Check-out might differ for you when compared to the above screenshot.
 
 #### Task summary 
 
