@@ -450,11 +450,11 @@ You will now deploy the Linux versions of the Microsoft Monitoring Agent and Dep
 27. Enter the following command, followed by the password **<inject key="SmartHotelHost Admin Password" />** when prompted:
 
 
-    ```s
+    ```
     sudo -s
     ```
 
-    This gives the terminal session elevated privileges.
+    > This gives the terminal session elevated privileges.
 
 28. Enter the following command, substituting \<Workspace ID\> and \<Workspace Key\> with the values copied previously. Answer **Yes** when prompted to restart services during package upgrades without asking.  
 
