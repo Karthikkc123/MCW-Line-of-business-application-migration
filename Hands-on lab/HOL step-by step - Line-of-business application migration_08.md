@@ -156,7 +156,7 @@ In this task, you will register your Hyper-V host with the Azure Migrate: Server
    
     ![Screenshot of the Azure portal showing the 'Discover' button on the Azure Migrate Server Migration panel.](images/Exercise3/azuremigrate-15.png "Azure Migrate: Server Migration - Discover")
 
-2. In the **Discover machines** panel,
+2. In the **Discover machines** panel, provide the following details:
    - under **Are your machines virtualized**, select **Yes, with Hyper-V**.
    - Under **Target region** the region is automatically selected as same the Resource Group's region.
    - Check the **confirmation** checkbox and select **Create resources** to begin the deployment of the Azure Site Recovery resource used by Azure Migrate: Server Migration for Hyper-V migrations.
