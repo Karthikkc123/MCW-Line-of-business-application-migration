@@ -14,7 +14,7 @@ In this task, you will and select the assessment and migration tools, the Azure 
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
     * Azure Password: <inject key="AzureAdUserPassword"></inject>
 
-2. Click on **Show Portal Menu** bar and select **All services** in the portal's left navigation. then search for and select **Azure Migrate** to open the Azure Migrate Overview blade, shown below. 
+2. Click on **Show Portal Menu** bar and select **All services** in the portal's left navigation.
  
     ![Screenshot of the All services overview blade.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/Allservices.png?raw=true "Allservices Overview blade")
 
