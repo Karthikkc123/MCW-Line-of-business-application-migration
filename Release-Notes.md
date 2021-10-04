@@ -1,5 +1,10 @@
 # Release Notes
 
+### 28 September 2021
+
+  - Minor updates in the Lab Guide.
+  - Updated the screenshot and added a note in Exercise 3 to access the Smarhotel Application for better user experience.
+-----------------
 
 ### 28 September 2021
 
