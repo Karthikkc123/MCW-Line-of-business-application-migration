@@ -30,7 +30,7 @@ In this task you will create a new Azure Storage Account that will be used by Az
   
    - Redundancy: **Locally-redundant storage (LRS)**
 
-    ![Screenshot of the Azure portal showing the create storage account blade.](images/Exercise3/sg-01.png "Storage account settings")
+    ![Screenshot of the Azure portal showing the create storage account blade.](images/Exercise3/EX3-sg-01.png "Storage account settings")
 
 3. Select **Review + create**, then select **Create**.
 
@@ -439,9 +439,20 @@ In this task, you will associate a public IP address with the UbuntuWAF VM. This
 
 6. Open a new browser tab and paste the IP address into the address bar. Verify that the SmartHotel360 application is now available in Azure
 
-   ![Screenshot showing the SmartHotel application.](images/Exercise3/webpage.png "Migrated SmartHotel application")
+   ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/lob-issue-02.png?raw=true)
    
-   > **Note**: The Check-in and Check-out might differ for you when compared to the above screenshot.
+   > **Note**: 
+      1. The Check-in and Check-out might differ for you when compared to the above screenshot.
+
+      1.  If you receive any error while accessing the apllication using UbuntuWAF VM IP address, then follow the below instructions to access the smarthotel application:
+   
+           1. Navigate to the **SmartHotelDBRG** resource group, and then to the **SmartHoteldb<inject key="DeploymentID" enableCopy="false" />** database server to update the Firewall settings.
+           1. Under Security, select Firewalls and virtual networks. Set 'Deny public network access' to **No**, then Save your changes.
+
+              ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/lob-issue-01.png?raw=true)
+     
+          1. Open a new browser tab and paste the IP address into the address bar. Verify that the SmartHotel360 application is now available in Azure.
+   
 
 #### Task summary 
 
