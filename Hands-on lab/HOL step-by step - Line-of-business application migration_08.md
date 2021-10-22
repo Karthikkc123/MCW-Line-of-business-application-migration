@@ -40,7 +40,7 @@ In this task you will create a new Azure Storage Account that will be used by Az
 
    ![Screenshot of the Azure portal showing the create storage account blade.](images/Exercise3/storageaccount-01.png "Storage account settings")
 
-6. Now, uncheck the box next to **Enable soft delete for blobs** and **Enable soft delete for containers** to disable the soft delete on blobs and container as the soft delete enabled storage account is not supported for enabling replication on Virtual Machines. (You will enable replication on Virtual Machines in Task4 of this Exercise)
+6. Now, uncheck the box next to **Enable soft delete for blobs** and **Enable soft delete for containers** to disable the soft delete on blobs and container as the soft delete enabled storage account is **not supported** for enabling replication on Virtual Machines. (You will enable replication on Virtual Machines in Task4 of this Exercise)
 
    ![Screenshot of the Azure portal showing the create storage account blade.](images/Exercise3/storageaccount-02.png "Storage account settings")
 
