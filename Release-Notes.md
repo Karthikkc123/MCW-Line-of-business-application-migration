@@ -1,5 +1,12 @@
 # Release Notes
 
+### 22 October 2021
+
+  - Minor updates in the Lab Guide.
+  -  Added a note in Exercise 2  for better user experience to access the Smarhotel database in case of any issues while performing migration.
+  - Updated the instructions and screenshots in Eercise 3 to to disable the soft delete on blobs and container as the soft delete enabled storage account is not supported for enabling replication on Virtual Machines
+-----------------
+
 ### 28 September 2021
 
   - Minor updates in the Lab Guide.
