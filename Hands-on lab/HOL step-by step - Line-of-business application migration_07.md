@@ -330,6 +330,10 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 16. Complete the **Select target** step as follows, then select **Next: Summary**:
 
     - Target server name: **Paste the server name value you copied earlier, {something}.database.windows.net**.
+
+       > **Note**: You can find the target server name in the Azure portal by browsing to your database.
+
+         ![Screenshot showing the Azure SQL Database server name.](images/Exercise2/sql-db-name.png "SQL database server name")
   
     - Authentication type: **SQL Authentication**
   
@@ -341,9 +345,16 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
     ![Screenshot showing the DMS migration target settings.](images/Exercise2/select-target.png "DMS project - select target")
 
-    > **Note**: You can find the target server name in the Azure portal by browsing to your database.
 
-    ![Screenshot showing the Azure SQL Database server name.](images/Exercise2/sql-db-name.png "SQL database server name")
+    > **Note**: If you receive any error while connecting to the target database due to network connectivity issues, then follow the below instructions to access the database:
+
+      1. Navigate to the SmartHotelDBRG resource group, and then to the SmartHoteldb database server to update the Firewall settings.
+
+      1. Under Security, select **Firewalls and virtual networks**, set the follwoing parameters and save your changes.
+           
+           1. `Deny public network access`: **No** 
+           1. `Allow Azure services and resources to access this server`: **Yes**
+
 
 17. At the **Project summary** step, review the settings and select **Save project** to create the migration project.
 
