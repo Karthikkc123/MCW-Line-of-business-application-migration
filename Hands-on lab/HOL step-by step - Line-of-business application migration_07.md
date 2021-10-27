@@ -131,7 +131,7 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
     
    ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/addtool-4.png?raw=true)
 
-6. Once the tools are installed in Azure Migrate, the portal should show the **Azure Migrate - SQL Server(only)** blade. 
+6. Once the tools are installed in Azure Migrate, the portal should show the **Azure Migrate - Databases (only)** blade. 
 
 7. From within **JumpVM**, open **Windows Explorer** and navigate to the **C:\\Program Files\\Microsoft Data Migration Assistant** folder. Open the **Dma.exe.config** file using Notepad. Search for **AzureMigrate** and remove the **\<\!-- and --\>** around the line setting the **EnableAssessmentUploadToAzureMigrate** key. **Save** the file and close Notepad when done.
 
@@ -200,9 +200,9 @@ In this task you will use Microsoft Data Migration Assistant (DMA) to assess the
 
     ![Screenshot of the DMA showing the assessment results upload panel.](images/Exercise2/db-upload.png "Upload to Azure Migrate")
 
-18. Return to the **Azure Migrate - SQL Server(only)** blade in the Azure portal. Refreshing the page should now show the assessed database.
+18. Return to the **Azure Migrate - Databases (only)** blade in the Azure portal. Refreshing the page should now show the assessed database.
 
-    ![Screenshot of the 'Azure Migrate - Databases' blade in the Azure portal, showing 1 assessed database.](images/Exercise2/Ex2-03.png "Azure Migrate - Database Assessment")
+    ![Screenshot of the 'Azure Migrate - Databases' blade in the Azure portal, showing 1 assessed database.](images/Exercise2/azuremigrate-12.1.png "Azure Migrate - Database Assessment")
 
 #### Task summary 
 
