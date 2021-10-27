@@ -345,8 +345,6 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
     - Encrypt connection: **Checked**
 
-      ![Screenshot showing the DMS migration target settings.](images/Exercise2/select-target.png "DMS project - select target")
-
 
     > **Note**: If you receive any error while connecting to the target database due to network connectivity issues, then follow the below instructions to access the database:
 
@@ -357,6 +355,8 @@ We'll start by creating the private endpoint that allows the DMS to access the d
             1. `Deny public network access`: **No** 
             1. `Allow Azure services and resources to access this server`: **Yes**
 
+
+      ![Screenshot showing the DMS migration target settings.](images/Exercise2/select-target.png "DMS project - select target")
 
 17. At the **Project summary** step, review the settings and select **Save project** to create the migration project.
 
