@@ -28,15 +28,17 @@ In this task you will create a new Azure SQL database to migrate the on-premises
   
         - Server name: **smarthoteldb<inject key="DeploymentID" enableCopy="false" />**
 
+        - Location: **IMPORTANT: Select the same region as the resource group - this makes migration faster.**
+
+             > **Note**: You can verify the location by navigating to `https://portal.azure.com` in the new browser tab, and then selecting the resource group from the left navigation menu.
+
+        - Authentication method: Select **Use SQL Authentication**
+
         - Server admin login: <inject key="SmartHotelHost Admin Username"></inject>
   
         - Password: **<inject key="SmartHotelHost Admin Password" />**
 
-        - Location: **IMPORTANT: Select the same region as the resource group - this makes migration faster.**
-
-   > **Note**: You can verify the location by navigating to `https://portal.azure.com` in the new browser tab, and then selecting the resource group from the left navigation menu.
-
-   ![Screenshot from the Azure portal showing the New server blade (when creating a SQL database).](https://github.com/Shivashant25/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/e2%20t1%20s3.png?raw=true "Create Server for SQL Database")
+   ![Screenshot from the Azure portal showing the New server blade (when creating a SQL database).](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/sqlserver-01.png?raw=true "Create Server for SQL Database")
 
     - Want to use SQL elastic pool?: **No**
   
@@ -260,7 +262,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
   
    - Private DNS zones: (default) **privatelink.database.windows.net**
 
-   ![Screenshot showing the 'Create a private endpoint' blade, 'Configuration' tab.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/private-endpoint.png?raw=true "Private Endpoint - Configuration")
+   ![Screenshot showing the 'Create a private endpoint' blade, 'Configuration' tab.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise2/sqlserver-02.png?raw=true "Private Endpoint - Configuration")
 
 6. **Wait** for the deployment to complete. Once the deployment is done, click on  **Go to resource**.
 
