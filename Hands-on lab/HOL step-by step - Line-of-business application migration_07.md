@@ -345,7 +345,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
     - Encrypt connection: **Checked**
 
-    ![Screenshot showing the DMS migration target settings.](images/Exercise2/select-target.png "DMS project - select target")
+      ![Screenshot showing the DMS migration target settings.](images/Exercise2/select-target.png "DMS project - select target")
 
 
     > **Note**: If you receive any error while connecting to the target database due to network connectivity issues, then follow the below instructions to access the database:
