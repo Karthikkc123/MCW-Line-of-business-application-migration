@@ -461,7 +461,7 @@ In this task, you will associate a public IP address with the UbuntuWAF VM. This
       1.  If you receive any error while accessing the apllication using UbuntuWAF VM IP address, then follow the below instructions to access the smarthotel application:
    
            1. Navigate to the **SmartHotelDBRG** resource group, and then to the **SmartHoteldb<inject key="DeploymentID" enableCopy="false" />** database server to update the Firewall settings.
-           1. Under Security, select Firewalls and virtual networks. Set 'Deny public network access' to **No** and **Allow Azure services and resources to access this server** to **Yes**, then Save your changes.
+           1. Under Security, select Firewalls and virtual networks. Set `Deny public network access` to **No** and `Allow Azure services and resources to access this server` to **Yes**, then Save your changes.
 
               ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise3/lob-issue-01.png?raw=true)
      
