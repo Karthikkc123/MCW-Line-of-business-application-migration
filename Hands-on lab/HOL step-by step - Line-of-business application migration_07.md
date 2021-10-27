@@ -345,18 +345,14 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
     - Encrypt connection: **Checked**
 
+       > **Note**: If you receive any error while connecting to the target database due to network connectivity issues, then follow the below instructions to access the database:
+         1. Navigate to the SmartHotelDBRG resource group, and then to the SmartHoteldb database server to update the Firewall settings.
 
-    > **Note**: If you receive any error while connecting to the target database due to network connectivity issues, then follow the below instructions to access the database:
-
-      1. Navigate to the SmartHotelDBRG resource group, and then to the SmartHoteldb database server to update the Firewall settings.
-
-      1. Under Security, select **Firewalls and virtual networks**, set the follwoing parameters and save your changes.
+         1. Under Security, select **Firewalls and virtual networks**, set the parameters `Deny public network access`: **No** and  `Allow Azure services and resources to access this server`: **Yes** then save your changes.
            
-            1. `Deny public network access`: **No** 
-            1. `Allow Azure services and resources to access this server`: **Yes**
 
 
-      ![Screenshot showing the DMS migration target settings.](images/Exercise2/select-target.png "DMS project - select target")
+     ![Screenshot showing the DMS migration target settings.](images/Exercise2/select-target.png "DMS project - select target")
 
 17. At the **Project summary** step, review the settings and select **Save project** to create the migration project.
 
