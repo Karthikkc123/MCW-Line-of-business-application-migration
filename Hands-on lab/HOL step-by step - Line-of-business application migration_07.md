@@ -252,7 +252,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
 
    ![Screenshot showing the 'Create a private endpoint' blade, 'Resource' tab.](images/Exercise2/private-endpoint-2.png "Private Endpoint - Resource")
    
-5. On the **Configuration** tab enter the following configuration then select **Review + create**, then **Create**.
+5. On the **Configuration** tab enter the following configuration , click on **Next: Tags** then select **Review + create** followed by **Create**.
 
    - Virtual network: **DMSvnet**
   
