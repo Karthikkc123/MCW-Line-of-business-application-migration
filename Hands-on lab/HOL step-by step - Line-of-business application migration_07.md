@@ -352,7 +352,7 @@ We'll start by creating the private endpoint that allows the DMS to access the d
            
 
 
-     ![Screenshot showing the DMS migration target settings.](images/Exercise2/select-target.png "DMS project - select target")
+    ![Screenshot showing the DMS migration target settings.](images/Exercise2/select-target.png "DMS project - select target")
 
 17. At the **Project summary** step, review the settings and select **Save project** to create the migration project.
 
