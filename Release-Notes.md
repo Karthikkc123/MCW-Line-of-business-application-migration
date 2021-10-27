@@ -1,10 +1,17 @@
 # Release Notes
 
+
+### 27 October 2021
+
+  - Minor updates in the Lab Guide.
+  - Updated the instructions and screenshots in all the exercises as the UI for **Azure Migrate** has been updated from Azure end. Also, the instructions to access the Smarhotel Application in Exercise 3 Task 9 are updated.
+-----------------
+
 ### 22 October 2021
 
   - Minor updates in the Lab Guide.
   -  Added a note in Exercise 2  for better user experience to access the Smarhotel database in case of any issues while performing migration.
-  - Updated the instructions and screenshots in Eercise 3 to to disable the soft delete on blobs and container as the soft delete enabled storage account is not supported for enabling replication on Virtual Machines
+  - Updated the instructions and screenshots in Exercise 3 to disable the soft delete on blobs and container as the soft delete enabled storage account is not supported for enabling replication on Virtual Machines
 -----------------
 
 ### 28 September 2021
