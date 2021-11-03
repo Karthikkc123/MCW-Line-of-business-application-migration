@@ -150,11 +150,11 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' panel.](images/Exercise1/add-cred2.png "Credentials")
 
-    > **Note** : If the **Credentials** are already added, click on **Edit** and enter the password **<inject key="SmartHotelHost Admin Password" />**  for the Hyper-V host/cluster and select **Save**.
+     > **Note** : If the **Credentials** are already added, click on **Edit** and enter the password **<inject key="SmartHotelHost Admin Password" />**  for the Hyper-V host/cluster and select **Save**.
 
-    > **Note**: The Azure Migrate appliance may not have picked up your local keyboard mapping. Select the 'eyeball' in the password box to check the password was entered correctly.
+     > **Note**: The Azure Migrate appliance may not have picked up your local keyboard mapping. Select the 'eyeball' in the password box to check the password was entered correctly.
 
-    > **Note:** Multiple credentials are supported for Hyper-V VMs discovery, via the 'Add more' button.
+     > **Note:** Multiple credentials are supported for Hyper-V VMs discovery, via the 'Add more' button.
 
 12. In **Step 2: Provide Hyper-V host/cluster details**, select **Add discovery source** to specify the Hyper-V host/cluster IP address/FQDN and the friendly name for credentials to connect to the host/cluster.
 
