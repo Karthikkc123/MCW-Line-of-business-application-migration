@@ -150,6 +150,10 @@ In this task, you will configure the Azure Migrate appliance and use it to compl
 
     ![Screenshot of the Azure Migrate appliance configuration wizard, showing the 'Add credentials' panel.](images/Exercise1/add-cred2.png "Credentials")
 
+     > **Note** : If the **Credentials** are already added, click on **Edit** and enter the password **<inject key="SmartHotelHost Admin Password" />**  for the Hyper-V host/cluster and select **Save**.
+
+
+
      > **Note**: The Azure Migrate appliance may not have picked up your local keyboard mapping. Select the 'eyeball' in the password box to check the password was entered correctly.
 
      > **Note:** Multiple credentials are supported for Hyper-V VMs discovery, via the 'Add more' button.
@@ -387,6 +391,20 @@ In this task, you will configure the Azure Migrate dependency visualization feat
 13. On the **Microsoft Software License Terms** blade, select **I Agree** 
 
     ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/mma2.png?raw=true "MMA installation")
+
+    **Note** : If you are not able to see the **I Agree** option on the **Microsoft Software License Terms** blade then follow the below instructions to remove the existing installation.
+    
+      1. On the **Programming Maintainence** blade, select **Repair** and click on **Next**.
+
+         ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/mma-1.png?raw=true)
+
+      2. On the **Remove the Program** blade, click on **Remove** 
+
+         ![](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/snapshot/Hands-on%20lab/images/Exercise1/mma-2.png?raw=true)
+          
+      3. Select **Finish** to remove the existing installation and continue from Step 11 of this task.
+
+         ![Screenshot for installing 64-bit Microsoft Monitoring Agent for Windows.](https://github.com/CloudLabs-MCW/MCW-Line-of-business-application-migration/blob/fix/Hands-on%20lab/images/local/mma6.png?raw=true "MMA installation")
 
 14. On the **Destination Folder** blade, leave everything as default and select **Next**. 
 
