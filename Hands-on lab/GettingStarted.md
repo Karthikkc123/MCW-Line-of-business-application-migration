@@ -9,7 +9,11 @@
    ![](images/local/cloudlabs-env-page.png "Lab Environment")
  
     > You will see SUFFIX value on **Environment Details** tab, use it whereever you see SUFFIX or DeploymentID in lab steps.
- 
+
+1. You can validate the each task by navigating to **Lab Validation** tab and clicking on **Validate** button. Please make sure to run the validation steps for each task after performing it. 
+
+   ![](images/local/validation.png "Lab Environment")
+
 ## Login to Azure Portal
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
@@ -44,3 +48,4 @@
     ![](images/local/image10.png "Resource groups")
    
 1. Now, click on the **Next** from lower right corner to move on next page.
+
