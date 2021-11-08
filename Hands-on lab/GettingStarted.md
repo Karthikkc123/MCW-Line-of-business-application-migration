@@ -45,7 +45,7 @@
    
 1. Confirm you have all resource group are present as shown below.
 
-    ![](images/local/image10.png "Resource groups")
+    ![](images/local/upimage10.png "Resource groups")
    
 1. Now, click on the **Next** from lower right corner to move on next page.
 
